@@ -20,7 +20,7 @@ return new class extends Migration
             $table->float('hours');
 
             $table->integer('vacancies')->nullable();
-            $table->integer('remaining_vacancies')->nullable();
+            $table->integer('amount_subscriptions')->nullable();
 
             $table->enum('type', ['lecture', 'workshop']);
 
