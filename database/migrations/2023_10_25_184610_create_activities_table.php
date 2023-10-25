@@ -18,7 +18,9 @@ return new class extends Migration
             $table->dateTime('starts_at');
             $table->dateTime('ends_at');
             $table->float('hours');
+
             $table->integer('vacancies')->nullable();
+            $table->integer('remaining_vacancies')->nullable();
 
             $table->enum('type', ['lecture', 'workshop']);
 

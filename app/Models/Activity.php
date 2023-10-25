@@ -15,6 +15,7 @@ class Activity extends Model
         'ends_at',
         'hours',
         'vacancies',
+        'remaining_vacancies',
         'type',
         'event_fk',
     ];
