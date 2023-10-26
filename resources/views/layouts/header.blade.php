@@ -1,3 +1,3 @@
 <header class="justify-content-center text-center mb-4">
-    <img class="img-fluid border" width="500px" src="{{ asset('img/event-logo.jpeg') }}" alt="Logo do evento">
+    <img class="img-fluid border" width="500px" src="{{ asset('img/event-logo.jpeg') }}" tabindex="1" alt="Logo do evento. Na parte superior em destaque o nome do evento, II Seminário de Educação com Inclusão: construindo saberes e práticas inclusivas, ilustrado por quatro desenhos simbólicos: à direita, Libras e Autismo, à esquerda Deficiência Física e Deficiência Visual.">
 </header>

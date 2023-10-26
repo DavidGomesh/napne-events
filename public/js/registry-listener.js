@@ -32,11 +32,13 @@ $(document).ready(() => {
 
         if (!name) {
             $('#name').focus()
+            $('#name').attr('aria-label', 'Preencha o nome completo. Será usado no controle de frequência e no certificado.')
             return
         }
         
         if (!email || !email.includes('@')) {
             $('#email').focus()
+            $('#email').attr('aria-label', 'Preencha o e-mail corretamente. Para onde o certificado será enviado.')
             return
         }
 
@@ -50,7 +52,7 @@ $(document).ready(() => {
 
         const profession = (() => {
             const radioProf = $('input[name=profession]:checked')
-            return radioProf.attr('id') != 'other-profession' ? radioProf.val() :(
+            return radioProf.attr('id') != 'other-profession' ? radioProf.val().trim() :(
                 $('#input-other-profession').val() || 'Nenhuma'
             )
         })()
