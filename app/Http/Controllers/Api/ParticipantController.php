@@ -30,7 +30,9 @@ class ParticipantController extends Controller
      */
     public function store(StoreParticipantRequest $request)
     {
-        //
+        $participant = $request->all();
+        $participant['participant_id'] = uuid_create();
+        return Participant::create($participant);
     }
 
     /**
