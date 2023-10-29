@@ -9,6 +9,7 @@ class RegistryParticipantController extends Controller {
     
     public function index() {
         return view('registry/listener', [
+            'title' => 'Inscrever-se',
             'workshops' => Activity::where('type', 'workshop')->get()
         ]);
     }

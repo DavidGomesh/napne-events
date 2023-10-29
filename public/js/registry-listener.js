@@ -24,7 +24,6 @@ $(document).ready(() => {
     })
     
     $('#btn-subscribe').click(() => {
-
         $('#form-listener').addClass('was-validated')
 
         const name = $('#name').val()
@@ -74,12 +73,13 @@ $(document).ready(() => {
                 name, email, has_disability, assistance_needed, profession, workshop, 
                 role: 'listener', accredited: 0
             },
-            success: r => {
-                console.log(r)
-                Swal.fire(
-                    'Inscrição realizada!',
-                    'Sua inscrição foi realizada com sucesso!',
-                    'success'
+            success: _ => {
+                Swal.fire({
+                    title: 'Inscrição realizada!',
+                    text: 'Sua inscrição foi realizada com sucesso!',
+                    icon: 'success'
+                }).then(
+                    result => { if (result.isConfirmed) window.location.href = '/#schedule' }
                 )
             },
             error: xhr => {
