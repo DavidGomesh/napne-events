@@ -1,9 +1,15 @@
 
 $(document).ready(() => {
 
+    $('#name, #email').keydown(event => {
+        if (event.which === 13) {
+            trySubscribe()
+        }
+    })
+
     $('input[name=has-disability-check]').change(function () {
-        const isChecked = $(this).attr('id') == 'has-disability';
-        $('#div-assistance').toggleClass('d-none', !isChecked);
+        const isChecked = $(this).attr('id') == 'has-disability'
+        $('#div-assistance').toggleClass('d-none', !isChecked)
     })
 
     $('input[name=assistance]').change(function () {
@@ -16,8 +22,8 @@ $(document).ready(() => {
     })
     
     $('input[name=profession]').change(function () {
-        const isChecked = $(this).attr('id') == 'other-profession';
-        $('#div-other-profession').toggleClass('d-none', !isChecked);
+        const isChecked = $(this).attr('id') == 'other-profession'
+        $('#div-other-profession').toggleClass('d-none', !isChecked)
     })
     
     $('input[name=workshop]').change(function () {
