@@ -3,6 +3,7 @@
 namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
+use Illuminate\Validation\Rule;
 
 class StoreParticipantRequest extends FormRequest
 {
@@ -22,7 +23,16 @@ class StoreParticipantRequest extends FormRequest
     public function rules(): array
     {
         return [
-            //
+            'name' => ['required'],
+            'email' => ['required'],
+            'role' => ['required', Rule::in(['monitor', 'listener', 'speaker'])],
         ];
+    }
+
+    protected function prepareForValidation() {
+        $this->merge([
+            'has_disability' => $this->hasDisability,
+            'assistance_needed' => $this->assistanceNeeded,
+        ]);
     }
 }

@@ -23,7 +23,30 @@ $(document).ready(() => {
         $('input[name=workshop]').not(this).prop('checked', false)
     })
     
-    $('#btn-subscribe').click(() => {
+    $('#btn-subscribe').click(trySubscribe)
+
+    function trySubscribe() {
+        const workshopId = $('input[name=workshop]:checked').val()
+        if (workshopId) {
+            return $.ajax({
+                url: `/api/activities/${workshopId}/has-vacancies`,
+                method: 'GET',
+                success: r => {
+                    if (!r.hasVacancies) {
+                        return Swal.fire(
+                            'Oficina sem vagas',
+                            'A oficina selecionada ficou sem vagas!',
+                            'error'
+                        )
+                    }
+                    subscribe()
+                }
+            })
+        }
+        subscribe()
+    }
+
+    function subscribe() {
         $('#form-listener').addClass('was-validated')
 
         const name = $('#name').val()
@@ -41,10 +64,10 @@ $(document).ready(() => {
             return
         }
 
-        const has_disability = $('input[name=has-disability-check]:checked').val()
-        const assistance_needed = (() => {
+        const hasDisability = $('input[name=has-disability-check]:checked').val()
+        const assistanceNeeded = (() => {
             const checkAssis = $('input[name=assistance]:checked')
-            return has_disability == '1' ? (checkAssis.length == 0 ? 'Nenhum' : checkAssis.toArray().reduce(
+            return hasDisability == '1' ? (checkAssis.length == 0 ? 'Nenhum' : checkAssis.toArray().reduce(
                 (acc, input) => acc + $(input).val() + ', ', ''
             ).trim().replace(/,$/, '')) : undefined
         })()
@@ -56,7 +79,7 @@ $(document).ready(() => {
             )
         })()
 
-        const workshop = $('input[name=workshop]:checked').val()
+        const workshopId = $('input[name=workshop]:checked').val()
 
         Swal.fire({
             title: 'Aguarde!',
@@ -65,19 +88,29 @@ $(document).ready(() => {
             showConfirmButton: false,
             allowOutsideClick: false,
         })
-
+        
         $.ajax({
             url: '/api/participants',
             method: 'POST',
             data: {
-                name, email, has_disability, assistance_needed, profession, workshop, 
-                role: 'listener', accredited: 0
+                name, email, hasDisability, assistanceNeeded, profession, workshopId, role: 'listener'
             },
-            success: _ => {
+            success: r => {
                 Swal.fire({
                     title: 'Inscrição realizada!',
-                    text: 'Sua inscrição foi realizada com sucesso!',
-                    icon: 'success'
+                    text: (() => {
+                        const message = {
+                            0: 'Sua inscrição foi realizada com sucesso!',
+                            1: 'Sua inscrição no evento foi realizada, mas não foi possível inscrevê-lo na oficina selecionada, pois as vagas se esgotaram.',
+                        }
+                        if (r.workshop) {
+                            return r.subscribed ? message[0] : message[1]
+                        }
+                        return message[0]
+
+                    })(),
+                    icon: 'success',
+                    allowOutsideClick: false,
                 }).then(
                     result => { if (result.isConfirmed) window.location.href = '/#schedule' }
                 )
@@ -90,5 +123,5 @@ $(document).ready(() => {
                 )
             },
         })
-    })
+    }
 })

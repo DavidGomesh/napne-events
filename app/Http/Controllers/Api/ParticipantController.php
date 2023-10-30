@@ -6,6 +6,8 @@ use App\Http\Controllers\Controller;
 use App\Models\Participant;
 use App\Http\Requests\StoreParticipantRequest;
 use App\Http\Requests\UpdateParticipantRequest;
+use App\Service\ActivityService;
+use App\Service\ParticipantService;
 
 class ParticipantController extends Controller
 {
@@ -18,21 +20,24 @@ class ParticipantController extends Controller
     }
 
     /**
-     * Show the form for creating a new resource.
-     */
-    public function create()
-    {
-        //
-    }
-
-    /**
      * Store a newly created resource in storage.
      */
-    public function store(StoreParticipantRequest $request)
-    {
-        $participant = $request->all();
-        $participant['participant_id'] = uuid_create();
-        return Participant::create($participant);
+    public function store(StoreParticipantRequest $request) {
+        try {
+            $participant = ParticipantService::save($request->all());
+            if ($request['workshopId']) {
+                $subscribed = ActivityService::subscribeWorkshop(
+                    $participant['participant_id'], $request['workshopId']
+                );
+            }
+            
+            return response()->json([
+                'workshop' => isset($request['workshopId']),
+                'subscribed' => $subscribed ?? null], 201
+            );
+        } catch (\Throwable $th) {
+            return response()->json(['error' => $th->getMessage()], 500);
+        }
     }
 
     /**

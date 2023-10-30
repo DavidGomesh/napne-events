@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Api\ActivityController;
 use App\Http\Controllers\Api\ParticipantController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
@@ -20,3 +21,7 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 Route::apiResource('/participants', ParticipantController::class);
+
+Route::group(['prefix'=> '/activities'], function () {
+    Route::get('{activityId}/has-vacancies', [ActivityController::class, 'hasVacancies']);
+});

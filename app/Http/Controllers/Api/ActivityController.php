@@ -41,6 +41,10 @@ class ActivityController extends Controller
         //
     }
 
+    public function hasVacancies($activityId) {
+        return ['hasVacancies' => Activity::find($activityId)->hasVacancies()];
+    }
+
     /**
      * Show the form for editing the specified resource.
      */

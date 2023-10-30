@@ -103,7 +103,7 @@
                     <div class="">
                         <div class="form-check">
                             <input class="form-check-input" type="checkbox" name="workshop" 
-                                id="{{ $w->activity_id }}" value="{{ $w->description }}" {{ !$vacancies ? 'disabled' : '' }}>
+                                id="{{ $w->activity_id }}" value="{{ $w->activity_id }}" {{ !$vacancies ? 'disabled' : '' }}>
                             <label class="form-check-label {{ !$vacancies ? 'text-secondary' : '' }}" for="{{ $w->activity_id }}">
                                 {{ $w->description }} ({{ $w->vacancies - $w->amount_subscriptions }} vagas)
                             </label>

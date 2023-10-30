@@ -16,13 +16,12 @@ return new class extends Migration
             
             $table->string('name');
             $table->string('email');
-            $table->string('profession');
-
-            $table->enum('role', ['monitor', 'listener', 'speaker']);
 
             $table->boolean('has_disability')->nullable();
             $table->string('assistance_needed')->nullable();
+            $table->string('profession')->nullable();
             
+            $table->enum('role', ['monitor', 'listener', 'speaker']);
             $table->boolean('accredited')->nullable();
 
             $table->timestamps();
