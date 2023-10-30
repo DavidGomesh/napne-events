@@ -11,5 +11,10 @@ class Event extends Model
 
     protected $primaryKey = 'event_id';
 
-    protected $fillable = ['name'];
+    public $incrementing = false;
+
+    protected $fillable = [
+        'event_id',
+        'name'
+    ];
 }

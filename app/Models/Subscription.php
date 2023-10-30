@@ -11,7 +11,10 @@ class Subscription extends Model
 
     protected $primaryKey = 'subscription_id';
 
+    public $incrementing = false;
+
     protected $fillable = [
+        'subscription_id',
         'activity_fk',
         'participant_fk',
     ];

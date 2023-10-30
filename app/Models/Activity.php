@@ -11,7 +11,10 @@ class Activity extends Model
 
     protected $primaryKey = 'activity_id';
 
+    public $incrementing = false;
+
     protected $fillable = [
+        'activity_id',
         'description',
         'starts_at',
         'ends_at',

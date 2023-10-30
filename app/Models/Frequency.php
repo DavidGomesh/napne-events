@@ -11,7 +11,10 @@ class Frequency extends Model
 
     protected $primaryKey = 'frequency_id';
 
+    public $incrementing = false;
+
     protected $fillable = [
+        'frequency_id',
         'activity_fk',
         'participant_fk',
     ];

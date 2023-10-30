@@ -11,6 +11,8 @@ class Participant extends Model
 
     protected $primaryKey = 'participant_id';
 
+    public $incrementing = false;
+
     protected $fillable = [
         'participant_id',
         'name',
