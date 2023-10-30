@@ -1,8 +1,3 @@
-{{-- <footer class="container">
-    <p class="float-end"><a href="#">Voltar ao início</a></p>
-    <p>Developed by David Gomesh | Copyright &copy; 2023</p>
-</footer> --}}
-
 <footer class="bg-light p-5 d-flex flex-column justify-content-center align-items-center">
     <div class="d-flex align-items-center">
         <div class="flex-shrink-0">

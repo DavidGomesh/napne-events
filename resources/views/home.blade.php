@@ -6,7 +6,7 @@
     <a class="btn btn-success" href="/registry">Inscrever-se</a>
 </div>
 
-<div class="container text-center pt-5">
+<div class="container text-center pt-5 mt-5">
     <img class="img-fluid border rounded mb-3" width="600px" src="{{ asset('img/acessibility-image.png') }}" alt="Uma imagem que precisa de audiodescrição.">
     <h1>II Seminário de Educação com Inclusão</h1>
     <p class="lead">Construindo saberes e práticas inclusivas.</p>

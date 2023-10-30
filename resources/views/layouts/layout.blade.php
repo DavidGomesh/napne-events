@@ -8,9 +8,10 @@
 
     <main>
         @yield('content')
-        @include('layouts/footer')
     </main>
-    
+
+    @include('layouts/footer')
+
     <script src="{{ asset('js/jquery.min.js') }}"></script>
     <script src="{{ asset('js/sweetalert.js') }}"></script>
     <script src="{{ asset('js/bootstrap.bundle.min.js') }}"></script>
