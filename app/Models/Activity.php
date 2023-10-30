@@ -9,6 +9,8 @@ class Activity extends Model
 {
     use HasFactory;
 
+    protected $primaryKey = 'activity_id';
+
     protected $fillable = [
         'description',
         'starts_at',
@@ -19,4 +21,8 @@ class Activity extends Model
         'type',
         'event_fk',
     ];
+
+    public function hasVacancies() {
+        return $this->vacancies > $this->amount_subscriptions;
+    }
 }

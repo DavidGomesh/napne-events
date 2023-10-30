@@ -9,6 +9,8 @@ class Participant extends Model
 {
     use HasFactory;
 
+    protected $primaryKey = 'participant_id';
+
     protected $fillable = [
         'participant_id',
         'name',

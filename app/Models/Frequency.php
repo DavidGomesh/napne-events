@@ -9,6 +9,8 @@ class Frequency extends Model
 {
     use HasFactory;
 
+    protected $primaryKey = 'frequency_id';
+
     protected $fillable = [
         'activity_fk',
         'participant_fk',

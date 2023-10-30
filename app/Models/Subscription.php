@@ -9,6 +9,8 @@ class Subscription extends Model
 {
     use HasFactory;
 
+    protected $primaryKey = 'subscription_id';
+
     protected $fillable = [
         'activity_fk',
         'participant_fk',
