@@ -14,6 +14,9 @@ return new class extends Migration
         Schema::create('events', function (Blueprint $table) {
             $table->uuid('event_id')->primary();
             $table->string('name');
+            $table->date('start_registration');
+            $table->date('end_registration');
+            $table->enum('permission_registration', ['yes', 'no', 'date'])->default('date');
             $table->timestamps();
         });
     }

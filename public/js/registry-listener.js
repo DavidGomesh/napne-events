@@ -8,6 +8,7 @@ $(document).ready(() => {
 
     $('input[name=assistance]').change(function () {
         if ($(this).attr('id') == 'nenhum-apoio') {
+            $(this).prop('checked', 'true')
             $('input[name=assistance]').not(this).prop('checked', false)
         } else {
             $('#nenhum-apoio').prop('checked', false)
