@@ -72,7 +72,7 @@ class ActivitySeeder extends Seeder
             'ends_at' => '2023-12-06 10:00:00',
             'hours' => '2',
             'vacancies' => 20,
-            'amount_subscriptions' => 10,
+            'amount_subscriptions' => 19,
             'type' => 'workshop',
             'event_fk' => '3f53a8e5-8e7a-4eab-b7b4-106adc555500',
         ]);

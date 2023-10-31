@@ -18,7 +18,7 @@ class EventSeeder extends Seeder
             'name'=> 'II Seminário de Educação com Inclusão',
             'start_registration' => '2023-10-30',
             'end_registration' => '2023-10-31',
-            'permission_registration' => 'date'
+            'permission_registration' => 'yes'
         ]);
     }
 }
