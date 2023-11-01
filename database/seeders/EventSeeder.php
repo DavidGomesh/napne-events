@@ -16,9 +16,9 @@ class EventSeeder extends Seeder
         Event::factory()->create([
             'event_id' => '3f53a8e5-8e7a-4eab-b7b4-106adc555500',
             'name'=> 'II Seminário de Educação com Inclusão',
-            'start_registration' => '2023-10-30',
-            'end_registration' => '2023-10-31',
-            'permission_registration' => 'yes'
+            'start_registration' => '2023-11-01',
+            'end_registration' => '2023-11-30',
+            'permission_registration' => 'date'
         ]);
     }
 }

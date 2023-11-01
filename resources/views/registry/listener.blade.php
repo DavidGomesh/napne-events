@@ -4,7 +4,7 @@
 
 <div class="container py-5">
 
-    @if ($event->permission_registration == 'yes' || ($event->permission_registration == 'date' && $event->start_registration <= now() && $event->end_registration >= now()))
+    @if ($event->permission_registration == 'yes' || ($event->permission_registration == 'date' && now() >= $event->start_registration && now() <= $event->end_registration))
         <div class="text-center mt-5 mb-4">
             <img class="img-fluid border rounded" width="600px" src="{{ asset('img/event-logo.jpeg') }}" alt="Logo do evento. Na parte superior em destaque o nome do evento, II Seminário de Educação com Inclusão: construindo saberes e práticas inclusivas, ilustrado por quatro desenhos simbólicos: à direita, Libras e Autismo, à esquerda Deficiência Física e Deficiência Visual.">
         </div>
@@ -76,19 +76,19 @@
                         <label class="form-check-label" for="professor">Professor(a)</label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="profession" value="Servidor(a)" id="server">
-                        <label class="form-check-label" for="server">Servidor(a)</label>
+                        <input class="form-check-input" type="radio" name="profession" value="Tradutor(a) Intérprete de Libras" id="interpreter">
+                        <label class="form-check-label" for="interpreter">Tradutor(a) Intérprete de Libras</label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="profession" value="Nenhuma" id="none">
-                        <label class="form-check-label" for="none">Nenhuma</label>
+                        <input class="form-check-input" type="radio" name="profession" value="Revisor(a) de Textos Braille" id="reviewer">
+                        <label class="form-check-label" for="reviewer">Revisor(a) de Textos Braille</label>
                     </div>
                     <div class="form-check">
                         <input class="form-check-input" type="radio" name="profession" id="other-profession">
                         <label class="form-check-label" for="other-profession">Outra</label>
                     </div>
                     <div class="d-none mt-2" id="div-other-profession">
-                        <input type="text" class="form-control" id="input-other-profession" placeholder="Sua ocupação">
+                        <input type="text" class="form-control" id="input-other-profession" placeholder="Informe sua ocupação (opcional)">
                     </div>
                 </fieldset>
             </div>

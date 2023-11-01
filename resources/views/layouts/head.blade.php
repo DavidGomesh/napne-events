@@ -6,6 +6,7 @@
     <meta name="author" content="David Gomesh">
     <meta name="generator" content="Laravel 10">
 
+    <link rel="shortcut icon" href="{{ asset('img/favicon.png') }}" type="image/x-icon">
     <title>{{ isset($title) ? $title . ' · ' : '' }}NAPNE Events</title>
 
     <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet">
