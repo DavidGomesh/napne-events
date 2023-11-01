@@ -7,7 +7,7 @@
 </div>
 
 <div class="container text-center pt-5 mt-5">
-    <img class="img-fluid border rounded" width="600px" src="{{ asset('img/event-logo.jpeg') }}" alt="Logo do evento. Na parte superior em destaque o nome do evento, II Seminário de Educação com Inclusão: construindo saberes e práticas inclusivas, ilustrado por quatro desenhos simbólicos: à direita, Libras e Autismo, à esquerda Deficiência Física e Deficiência Visual.">
+    <img class="img-fluid border rounded" width="600px" tabindex="1" src="{{ asset('img/event-logo.jpeg') }}" alt="Logo do evento. Na parte superior em destaque o nome do evento, II Seminário de Educação com Inclusão: construindo saberes e práticas inclusivas, ilustrado por quatro desenhos simbólicos: à direita, Libras e Autismo, à esquerda Deficiência Física e Deficiência Visual.">
     <p><a class="btn btn-success mt-4" href="/registry">Inscrever-se</a></p>
 </div>
 
@@ -42,28 +42,63 @@
             <ul>
                 <li>
                     <div class="mb-3">
-                        <div class="text-start"><span class="fw-bold">Palestra:</span> Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
+                        <div class="text-start"><span class="fw-bold">Credenciamento</span></div>
                         <div class="d-flex flex-column flex-md-row">
-                            <div class="me-5"><span class="fw-bold">Horário:</span> 08:00h</div>
-                            <div class=""><span class="fw-bold">Palestrante:</span> Fulana de Tal</div>
+                            <div class="me-5"><span class="fw-bold">Horário:</span> 8h - 16h</div>
+                            <div class=""><span class="fw-bold">Local:</span> Recepção do Campus Monte Castelo</div>
                         </div>
                     </div>
                 </li>
                 <li>
                     <div class="mb-3">
-                        <div class="text-start"><span class="fw-bold">Palestra:</span> Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
+                        <div class="text-start"><span class="fw-bold">Cerimônia de Abertura</span></div>
                         <div class="d-flex flex-column flex-md-row">
-                            <div class="me-5"><span class="fw-bold">Horário:</span> 08:00h</div>
-                            <div class=""><span class="fw-bold">Palestrante:</span> Fulana de Tal</div>
+                            <div class="me-5"><span class="fw-bold">Horário:</span> 9h - 10h</div>
+                            <div class=""><span class="fw-bold">Local:</span> Auditório Florise Pérola</div>
                         </div>
                     </div>
                 </li>
                 <li>
                     <div class="mb-3">
-                        <div class="text-start"><span class="fw-bold">Palestra:</span> Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
+                        <div class="text-start"><span class="fw-bold">Palestra:</span> Conferência de Abertura sobre Capacitismo | Prof.ª Helen Vinhote (IFMA/Maracanã)</div>
                         <div class="d-flex flex-column flex-md-row">
-                            <div class="me-5"><span class="fw-bold">Horário:</span> 08:00h</div>
-                            <div class=""><span class="fw-bold">Palestrante:</span> Fulana de Tal</div>
+                            <div class="me-5"><span class="fw-bold">Horário:</span> 10h - 11:30h</div>
+                            <div class=""><span class="fw-bold">Local:</span> Auditório Florise Pérola</div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="mb-3">
+                        <div class="text-start"><span class="fw-bold">Intervalo para almoço</span></div>
+                        <div class="d-flex flex-column flex-md-row">
+                            <div class="me-5"><span class="fw-bold">Horário:</span> 12h - 14h</div>
+                        </div>
+                    </div>
+                </li>
+                <hr>
+                <li>
+                    <div class="mb-3">
+                        <div class="text-start"><span class="fw-bold">Palestra:</span> Inclusão Social de Estudantes com Deficiência Intelectual, TEA e TDAH em Sala de Aula do Ensino Médio/Profissional e da Graduação | Prof.ª Dra. Lívia da Conceição Costa Zaquel (UFMA)</div>
+                        <div class="d-flex flex-column flex-md-row">
+                            <div class="me-5"><span class="fw-bold">Horário:</span> 14h - 16h</div>
+                            <div class=""><span class="fw-bold">Local:</span> Auditório Florise Pérola</div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="mb-3">
+                        <div class="text-start"><span class="fw-bold">Intervalo</span></div>
+                        <div class="d-flex flex-column flex-md-row">
+                            <div class="me-5"><span class="fw-bold">Horário:</span> 16h - 16:30h</div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="mb-3">
+                        <div class="text-start"><span class="fw-bold">Palestra:</span> Relatos de experiências de Estudantes do IFMA Campus São Luís - Monte Castelo</div>
+                        <div class="d-flex flex-column flex-md-row">
+                            <div class="me-5"><span class="fw-bold">Horário:</span> 16:30h - 18h</div>
+                            <div class=""><span class="fw-bold">Local:</span> Auditório Florise Pérola</div>
                         </div>
                     </div>
                 </li>
@@ -74,28 +109,83 @@
             <ul>
                 <li>
                     <div class="mb-3">
-                        <div class="text-start"><span class="fw-bold">Oficina:</span> Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
+                        <div class="text-start"><span class="fw-bold">Oficina:</span> Audiodescrição na sala de aula | Esp. Maria Soraia N. C. De Farias (IFMA Campus SJR)</div>
                         <div class="d-flex flex-column flex-md-row">
-                            <div class="me-5"><span class="fw-bold">Horário:</span> 08:00h</div>
-                            <div class=""><span class="fw-bold">Palestrante:</span> Fulana de Tal</div>
+                            <div class="me-5"><span class="fw-bold">Horário:</span> 8h - 12h</div>
+                            <div class=""><span class="fw-bold">Local:</span> a definir</div>
                         </div>
                     </div>
                 </li>
                 <li>
                     <div class="mb-3">
-                        <div class="text-start"><span class="fw-bold">Oficina:</span> Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
+                        <div class="text-start"><span class="fw-bold">Oficina:</span> Multiplano | Esp. Derocy Dias Reis (CAPDV-MA)</div>
                         <div class="d-flex flex-column flex-md-row">
-                            <div class="me-5"><span class="fw-bold">Horário:</span> 08:00h</div>
-                            <div class=""><span class="fw-bold">Palestrante:</span> Fulana de Tal</div>
+                            <div class="me-5"><span class="fw-bold">Horário:</span> 8h - 12h</div>
+                            <div class=""><span class="fw-bold">Local:</span> a definir</div>
                         </div>
                     </div>
                 </li>
                 <li>
                     <div class="mb-3">
-                        <div class="text-start"><span class="fw-bold">Palestra:</span> Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
+                        <div class="text-start"><span class="fw-bold">Oficina:</span> Libras | Esp. Kélcia Taylor (CAS-MA).</div>
                         <div class="d-flex flex-column flex-md-row">
-                            <div class="me-5"><span class="fw-bold">Horário:</span> 08:00h</div>
-                            <div class=""><span class="fw-bold">Palestrante:</span> Fulana de Tal</div>
+                            <div class="me-5"><span class="fw-bold">Horário:</span> 8h - 12h</div>
+                            <div class=""><span class="fw-bold">Local:</span> a definir</div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="mb-3">
+                        <div class="text-start"><span class="fw-bold">Oficina:</span> Desenho Universal de Aprendizagem | Ma. Leiliane Pereira Frazão (TAE e Chefe do Departamento de Ações Inclusivas do IFMA/São Luís- Maracanã)</div>
+                        <div class="d-flex flex-column flex-md-row">
+                            <div class="me-5"><span class="fw-bold">Horário:</span> 8h - 12h</div>
+                            <div class=""><span class="fw-bold">Local:</span> a definir</div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="mb-3">
+                        <div class="text-start"><span class="fw-bold">Oficina:</span> Práticas inclusivas e recursos acessíveis para estudantes com Transtorno do Espectro Autista | Ma. Fernanda Aline Costa França (SEMED/Paço do Lumiar)</div>
+                        <div class="d-flex flex-column flex-md-row">
+                            <div class="me-5"><span class="fw-bold">Horário:</span> 8h - 12h</div>
+                            <div class=""><span class="fw-bold">Local:</span> a definir</div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="mb-3">
+                        <div class="text-start"><span class="fw-bold">Oficina:</span> Metodologia para Desenvolver a Aprendizagem e Incluir | Ma. Ediane Araújo Silva (IFMA/São Luís-Monte Castelo).</div>
+                        <div class="d-flex flex-column flex-md-row">
+                            <div class="me-5"><span class="fw-bold">Horário:</span> 8h - 12h</div>
+                            <div class=""><span class="fw-bold">Local:</span> a definir</div>
+                        </div>
+                    </div>
+                </li>
+                <hr>
+                <li>
+                    <div class="mb-3">
+                        <div class="text-start"><span class="fw-bold">Mesa redonda:</span> Equidade no contexto escolar: adequações metodológicas | Palestrantes: Prof.ª Ma. Teresa Cristina Lafontaine, Prof.ª Dra.ª Kaciana Nascimento da Silveira Rosa, Prof.ª Ma. Nathalia Rissane Costa Gomes | Mediadora: Prof.ª Regiana Sousa Silva.</div>
+                        <div class="d-flex flex-column flex-md-row">
+                            <div class="me-5"><span class="fw-bold">Horário:</span> 14h - 16h</div>
+                            <div class=""><span class="fw-bold">Local:</span> Auditório Florise Pérola</div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="mb-3">
+                        <div class="text-start"><span class="fw-bold">Palestra de encerramento:</span> Adaptação Curricular | Ma. Regina Célia da Silva Reis (IFMA/São Luís-Monte Castelo).</div>
+                        <div class="d-flex flex-column flex-md-row">
+                            <div class="me-5"><span class="fw-bold">Horário:</span> 16:30h - 17:30h</div>
+                            <div class=""><span class="fw-bold">Local:</span> Auditório Florise Pérola</div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="mb-3">
+                        <div class="text-start"><span class="fw-bold">Apresentação cultural</span></div>
+                        <div class="d-flex flex-column flex-md-row">
+                            <div class="me-5"><span class="fw-bold">Horário:</span> 17:30h - 18:30h</div>
+                            <div class=""><span class="fw-bold">Local:</span> Auditório Florise Pérola</div>
                         </div>
                     </div>
                 </li>

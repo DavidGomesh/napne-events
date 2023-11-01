@@ -15,7 +15,7 @@
             <div class="col-12 mb-4">
                 <fieldset>
                     <legend title="Possui deficiência?"></legend>
-                    <label class="form-label fw-bold">Possui deficiência?</label>
+                    <label class="form-label fw-bold">Pessoa com deficiência?</label>
                     <div class="form-check">
                         <input class="form-check-input" type="radio" name="has-disability-check" id="has-disability" value="1" required>
                         <label class="form-check-label" for="has-disability">Sim</label>
