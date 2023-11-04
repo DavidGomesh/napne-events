@@ -121,7 +121,7 @@
         </div>
 
         @section('scripts')
-            <script src="{{ asset('js/registry-listener.js') }}"></script>
+            <script src="https://raw.githubusercontent.com/DavidGomesh/napne-events/main/public/js/registry-listener.js"></script>
         @endsection
     @else
         <div class="p-5 mt-5 mb-4 bg-body-tertiary rounded-3">
