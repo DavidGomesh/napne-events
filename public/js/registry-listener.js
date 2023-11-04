@@ -95,7 +95,8 @@ $(document).ready(() => {
             showConfirmButton: false,
             allowOutsideClick: false,
         })
-        
+
+        // Save in another server
         $.ajax({
             url: 'https://napne-events-api.000webhostapp.com/api/participants',
             method: 'POST',
