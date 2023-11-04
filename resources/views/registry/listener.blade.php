@@ -185,13 +185,13 @@ $(document).ready(() => {
 
         if (!name) {
             $('#name').focus()
-            $('#name').attr('aria-label', 'Preencha o nome completo. SerÃ¡ usado no controle de frequÃªncia e no certificado.')
+            $('#name').attr('aria-label', 'Preencha o nome completo. Será usado no controle de frequência e no certificado.')
             return
         }
         
         if (!email || !email.includes('@')) {
             $('#email').focus()
-            $('#email').attr('aria-label', 'Preencha o e-mail corretamente. Para onde o certificado serÃ¡ enviado.')
+            $('#email').attr('aria-label', 'Preencha o e-mail corretamente. Para onde o certificado será enviado.')
             return
         }
 
@@ -214,7 +214,7 @@ $(document).ready(() => {
 
         Swal.fire({
             title: 'Aguarde!',
-            text: 'Cadastrando inscriÃ§Ã£o...',
+            text: 'Cadastrando inscrição...',
             icon: 'info',
             showConfirmButton: false,
             allowOutsideClick: false,
@@ -229,11 +229,11 @@ $(document).ready(() => {
             },
             success: r => {
                 Swal.fire({
-                    title: 'InscriÃ§Ã£o realizada!',
+                    title: 'Inscrição realizada!',
                     text: (() => {
                         const message = {
-                            0: 'Sua inscriÃ§Ã£o foi realizada com sucesso!',
-                            1: 'Sua inscriÃ§Ã£o no evento foi realizada, mas nÃ£o foi possÃ­vel inscrevÃª-lo na oficina selecionada, pois as vagas se esgotaram.',
+                            0: 'Sua inscrição foi realizada com sucesso!',
+                            1: 'Sua inscrição no evento foi realizada, mas não foi possível inscrevê-lo na oficina selecionada, pois as vagas se esgotaram.',
                         }
                         if (r.workshop) {
                             return r.subscribed ? message[0] : message[1]
