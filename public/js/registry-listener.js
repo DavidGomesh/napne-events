@@ -36,7 +36,7 @@ $(document).ready(() => {
         const workshopId = $('input[name=workshop]:checked').val()
         if (workshopId) {
             return $.ajax({
-                url: `/api/activities/${workshopId}/has-vacancies`,
+                url: `https://napne-events-api.000webhostapp.com/api/activities/${workshopId}/has-vacancies`,
                 method: 'GET',
                 success: r => {
                     if (!r.hasVacancies) {
@@ -97,7 +97,7 @@ $(document).ready(() => {
         })
         
         $.ajax({
-            url: '/api/participants',
+            url: 'https://napne-events-api.000webhostapp.com/api/participants',
             method: 'POST',
             data: {
                 name, email, hasDisability, assistanceNeeded, profession, workshopId, role: 'listener'

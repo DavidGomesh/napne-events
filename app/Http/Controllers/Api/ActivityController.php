@@ -45,6 +45,10 @@ class ActivityController extends Controller
         return ['hasVacancies' => Activity::find($activityId)->hasVacancies()];
     }
 
+    public function workshops() {
+        return Activity::where('type', 'workshop')->get();
+    }
+
     /**
      * Show the form for editing the specified resource.
      */

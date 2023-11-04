@@ -41,6 +41,10 @@ class EventController extends Controller
         //
     }
 
+    public function unique() {
+        return Event::whereNotNull('event_id')->first();
+    }
+
     /**
      * Show the form for editing the specified resource.
      */

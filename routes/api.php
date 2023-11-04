@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Api\ActivityController;
+use App\Http\Controllers\Api\EventController;
 use App\Http\Controllers\Api\ParticipantController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
@@ -24,4 +25,9 @@ Route::apiResource('/participants', ParticipantController::class);
 
 Route::group(['prefix'=> '/activities'], function () {
     Route::get('{activityId}/has-vacancies', [ActivityController::class, 'hasVacancies']);
+    Route::get('/workshops', [ActivityController::class, 'workshops']);
+});
+
+Route::group(['prefix' => '/events'], function () {
+    Route::get('/unique', [EventController::class, 'unique']);
 });
