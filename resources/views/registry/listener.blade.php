@@ -250,7 +250,7 @@ $(document).ready(() => {
             error: xhr => {
                 Swal.fire(
                     'Algum erro ocorreu!',
-                    xhr.responseJSON.message,
+                    'Erro: ' + (xhr.responseJSON.message || xhr.responseJSON.error),
                     'error'
                 )
             },
