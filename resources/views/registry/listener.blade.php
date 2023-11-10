@@ -43,7 +43,7 @@
 
                     <div class="form-check">
                         <input class="form-check-input" type="checkbox" name="assistance" id="enlarged-font" value="Fonte Ampliada (Arial, 20)">
-                        <label class="form-check-label" for="guia-assinatura">Fonte Ampliada (Arial, 20)</label>
+                        <label class="form-check-label" for="enlarged-font">Fonte Ampliada (Arial, 20)</label>
                     </div>
 
                     <div class="form-check">
