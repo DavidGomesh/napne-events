@@ -42,6 +42,11 @@
                     </div>
 
                     <div class="form-check">
+                        <input class="form-check-input" type="checkbox" name="assistance" id="enlarged-font" value="Fonte Ampliada (Arial, 20)">
+                        <label class="form-check-label" for="guia-assinatura">Fonte Ampliada (Arial, 20)</label>
+                    </div>
+
+                    <div class="form-check">
                         <input class="form-check-input" type="checkbox" name="assistance" id="prog-braille" value="Programação em Braille">
                         <label class="form-check-label" for="prog-braille">Programação em Braille</label>
                     </div>
@@ -95,8 +100,8 @@
 
             <div class="col-12 mb-5">
                 <fieldset>
-                    <legend title="Workshops"></legend>
-                    <label class="form-label fw-bold">Workshops</label>
+                    <legend title="Oficinas"></legend>
+                    <label class="form-label fw-bold">Oficinas</label>
 
                     @foreach ($workshops as $w)
                         @php
