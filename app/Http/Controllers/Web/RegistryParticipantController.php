@@ -3,8 +3,6 @@
 namespace App\Http\Controllers\Web;
 
 use App\Http\Controllers\Controller;
-use App\Models\Activity;
-use App\Models\Event;
 use Illuminate\Support\Facades\Http;
 
 class RegistryParticipantController extends Controller {
