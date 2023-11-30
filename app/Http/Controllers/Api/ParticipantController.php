@@ -64,6 +64,15 @@ class ParticipantController extends Controller
         //
     }
 
+    public function accredit($participantId) {
+        try {
+            ParticipantService::accredit($participantId);
+            return response()->json(['accredited' => true], 200);
+        } catch (\Throwable $th) {
+            return response()->json(['error' => $th->getMessage()], 500);
+        }
+    }
+
     /**
      * Remove the specified resource from storage.
      */

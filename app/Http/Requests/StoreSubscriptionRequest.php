@@ -11,7 +11,7 @@ class StoreSubscriptionRequest extends FormRequest
      */
     public function authorize(): bool
     {
-        return false;
+        return true;
     }
 
     /**
@@ -22,7 +22,15 @@ class StoreSubscriptionRequest extends FormRequest
     public function rules(): array
     {
         return [
-            //
+            'participant_fk' => ['required'],
+            'activity_fk' => ['required'],
         ];
+    }
+
+    protected function prepareForValidation() {
+        $this->merge([
+            'participant_fk' => $this->participantFk,
+            'activity_fk' => $this->activityFk,
+        ]);
     }
 }
