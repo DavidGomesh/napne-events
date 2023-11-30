@@ -45,7 +45,7 @@
                         <div class="text-start"><span class="fw-bold">Credenciamento</span></div>
                         <div class="d-flex flex-column flex-md-row">
                             <div class="me-5"><span class="fw-bold">Horário:</span> 8h - 16h</div>
-                            <div class=""><span class="fw-bold">Local:</span> Recepção do Campus Monte Castelo</div>
+                            <div class=""><span class="fw-bold">Local:</span> Hall de entrada do Campus</div>
                         </div>
                     </div>
                 </li>
@@ -60,9 +60,9 @@
                 </li>
                 <li>
                     <div class="mb-3">
-                        <div class="text-start"><span class="fw-bold">Palestra:</span> Conferência de Abertura sobre Capacitismo | Prof.ª Helen Vinhote (IFMA/Maracanã)</div>
+                        <div class="text-start"><span class="fw-bold">Palestra de abertura:</span> Inclusão Social de Estudantes com Deficiência Intelectual, TEA e TDAH em Sala de Aula do Ensino Médio/Profissional e da Graduação | Prof.ª Dra. Lívia da Conceição Costa Zaquel (UFMA)</div>
                         <div class="d-flex flex-column flex-md-row">
-                            <div class="me-5"><span class="fw-bold">Horário:</span> 10h - 11:30h</div>
+                            <div class="me-5"><span class="fw-bold">Horário:</span> 10h - 11:10h</div>
                             <div class=""><span class="fw-bold">Local:</span> Auditório Florise Pérola</div>
                         </div>
                     </div>
@@ -78,18 +78,10 @@
                 <hr>
                 <li>
                     <div class="mb-3">
-                        <div class="text-start"><span class="fw-bold">Palestra:</span> Inclusão Social de Estudantes com Deficiência Intelectual, TEA e TDAH em Sala de Aula do Ensino Médio/Profissional e da Graduação | Prof.ª Dra. Lívia da Conceição Costa Zaquel (UFMA)</div>
+                        <div class="text-start"><span class="fw-bold">Palestra:</span> Capacitismo! Não queremos ser super-heróis, só queremos ser nós mesmos. | Prof.ª Helen Vinhote (IFMA/Maracanã)</div>
                         <div class="d-flex flex-column flex-md-row">
                             <div class="me-5"><span class="fw-bold">Horário:</span> 14h - 16h</div>
                             <div class=""><span class="fw-bold">Local:</span> Auditório Florise Pérola</div>
-                        </div>
-                    </div>
-                </li>
-                <li>
-                    <div class="mb-3">
-                        <div class="text-start"><span class="fw-bold">Intervalo</span></div>
-                        <div class="d-flex flex-column flex-md-row">
-                            <div class="me-5"><span class="fw-bold">Horário:</span> 16h - 16:30h</div>
                         </div>
                     </div>
                 </li>
@@ -175,7 +167,7 @@
                     <div class="mb-3">
                         <div class="text-start"><span class="fw-bold">Palestra de encerramento:</span> Adaptação Curricular | Ma. Regina Célia da Silva Reis (IFMA/São Luís-Monte Castelo).</div>
                         <div class="d-flex flex-column flex-md-row">
-                            <div class="me-5"><span class="fw-bold">Horário:</span> 16:30h - 17:30h</div>
+                            <div class="me-5"><span class="fw-bold">Horário:</span> 16h - 17h</div>
                             <div class=""><span class="fw-bold">Local:</span> Auditório Florise Pérola</div>
                         </div>
                     </div>
@@ -184,7 +176,7 @@
                     <div class="mb-3">
                         <div class="text-start"><span class="fw-bold">Apresentação cultural</span></div>
                         <div class="d-flex flex-column flex-md-row">
-                            <div class="me-5"><span class="fw-bold">Horário:</span> 17:30h - 18:30h</div>
+                            <div class="me-5"><span class="fw-bold">Horário:</span> 17h - 18h</div>
                             <div class=""><span class="fw-bold">Local:</span> Auditório Florise Pérola</div>
                         </div>
                     </div>
