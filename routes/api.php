@@ -25,7 +25,7 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 Route::apiResource('/subscriptions', SubscriptionController::class);
 
 Route::apiResource('/participants', ParticipantController::class);
-Route::patch('/participants/{participantId}/accredit/', [ParticipantController::class, 'accredit']);
+Route::get('/participants/{participantId}/accredit/', [ParticipantController::class, 'accredit']);
 
 Route::group(['prefix'=> '/activities'], function () {
     Route::get('{activityId}/has-vacancies', [ActivityController::class, 'hasVacancies']);

@@ -97,6 +97,9 @@
 
     @section('scripts')
         <script>
+            // const host = 'https://napne-events-api.000webhostapp.com'
+            const host = 'http://localhost:8000'
+
             $('.btn-accredit').click(function (){
                 const participantId = $(this).attr('participant-id')
                 const name = $(this).attr('name')
@@ -210,7 +213,7 @@
                             })
 
                             $.ajax({
-                                url: 'https://napne-events-api.000webhostapp.com/api/subscriptions',
+                                url: host + '/api/subscriptions',
                                 method: 'POST',
                                 data: {
                                     participantFk: participantId,
@@ -250,17 +253,19 @@
                         })
 
                         $.ajax({
-                            url: `https://napne-events-api.000webhostapp.com/api/participants/${participantId}/accredit`,
-                            method: 'PATCH',
+                            url: host + `/api/participants/${participantId}/accredit`,
+                            method: 'GET',
                             success: () => {
                                 Swal.fire('Credenciado!', `${name} foi credenciado(a)!`, 'success');
                                 $('#btn-accredited-' + participantId).removeClass('d-none')
                                 $('#btn-accredit-' + participantId).addClass('d-none')
                             },
                             error: xhr => {
+                                xhr.catch(e => console.log(e))
                                 Swal.fire(
                                     'Algum erro ocorreu!',
-                                    'Erro: ' + (xhr.responseJSON.message || xhr.responseJSON.error),
+                                    'Erro: ' + (xhr),
+                                    // 'Erro: ' + (xhr.responseJSON.message || xhr.responseJSON.error),
                                     'error'
                                 )
                             }
