@@ -47,6 +47,17 @@ class SubscriptionController extends Controller
         //
     }
 
+    public function exists($activityId, $participantId) {
+        try {
+            Subscription::where('activity_fk', $activityId)->where('participant_fk', $participantId)->firstOrFail();
+            return response()->json(['exists' => true]);
+        } catch (\Exception $e) {
+            return response()->json(['exists' => false, 
+                'message' => 'Subscription not found for the specified activity and participant.'], 404
+            );
+        }
+    }
+
     /**
      * Show the form for editing the specified resource.
      */

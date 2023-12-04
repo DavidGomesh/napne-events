@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Api\ActivityController;
 use App\Http\Controllers\Api\EventController;
+use App\Http\Controllers\Api\FrequencyController;
 use App\Http\Controllers\Api\ParticipantController;
 use App\Http\Controllers\Api\SubscriptionController;
 use Illuminate\Http\Request;
@@ -23,9 +24,11 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 Route::apiResource('/subscriptions', SubscriptionController::class);
+Route::get('/subscriptions/activity/{activityId}/participant/{participantId}', [SubscriptionController::class, 'exists']);
 
 Route::apiResource('/participants', ParticipantController::class);
 Route::get('/participants/{participantId}/accredit/', [ParticipantController::class, 'accredit']);
+Route::get('/participants/name/{name}', [ParticipantController::class, 'findByName']);
 
 Route::group(['prefix'=> '/activities'], function () {
     Route::get('{activityId}/has-vacancies', [ActivityController::class, 'hasVacancies']);
@@ -35,3 +38,5 @@ Route::group(['prefix'=> '/activities'], function () {
 Route::group(['prefix' => '/events'], function () {
     Route::get('/unique', [EventController::class, 'unique']);
 });
+
+Route::apiResource('/frequencies', FrequencyController::class);

@@ -11,7 +11,7 @@ class StoreFrequencyRequest extends FormRequest
      */
     public function authorize(): bool
     {
-        return false;
+        return true;
     }
 
     /**
@@ -22,7 +22,15 @@ class StoreFrequencyRequest extends FormRequest
     public function rules(): array
     {
         return [
-            //
+            'activity_fk' => ['required'],
+            'participant_fk' => ['required'],
         ];
+    }
+
+    protected function prepareForValidation() {
+        $this->merge([
+            'activity_fk' => $this->activityFk,
+            'participant_fk' => $this->participantFk,
+        ]);
     }
 }

@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\Frequency;
 use App\Http\Requests\StoreFrequencyRequest;
 use App\Http\Requests\UpdateFrequencyRequest;
+use App\Service\FrequencyService;
 
 class FrequencyController extends Controller
 {
@@ -30,7 +31,12 @@ class FrequencyController extends Controller
      */
     public function store(StoreFrequencyRequest $request)
     {
-        //
+        try {
+            FrequencyService::save($request->all());
+            return response()->json(['frequency' => true], 201);
+        } catch (\Throwable $th) {
+            return response()->json(['error' => $th->getMessage()], 500);
+        }
     }
 
     /**

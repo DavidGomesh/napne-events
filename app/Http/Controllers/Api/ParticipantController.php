@@ -45,7 +45,16 @@ class ParticipantController extends Controller
      */
     public function show(Participant $participant)
     {
-        //
+        return response()->json($participant);
+    }
+
+    public function findByName($name) {
+        try {
+            $participant = Participant::where('name', $name)->where('role', 'listener')->firstOrFail();
+            return response()->json($participant);
+        } catch (\Throwable $th) {
+            return response()->json(['error' => $th->getMessage()], 404);
+        }
     }
 
     /**
