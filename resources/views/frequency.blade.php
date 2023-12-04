@@ -51,6 +51,12 @@
             url: host + `/api/participants/name/${participantName}`,
             method: 'GET',
             success: participant => {
+                if (!participant.accredited) return Swal.fire(
+                    'Participante não credenciado!',
+                    'O participante foi encontrado mas não está credenciado!',
+                    'error'
+                )
+
                 if (activityType != 'workshop') {
                     registerFrequency(activityId, participant.participant_id)
                     return
